@@ -1,0 +1,23 @@
+{
+    "name": "tomaszhanc/php-di-controller-bundle",
+    "description": "Provides autowiring controllers for Symfony2 & PHP-DI",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomasz Hanc",
+            "email": "tomasz.hanc@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/http-kernel": "~2.3",
+        "symfony/config": "~2.3",
+        "symfony/dependency-injection": "~2.3",
+        "doctrine/annotations": "~1.2",
+        "mnapoli/php-di-symfony2": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
