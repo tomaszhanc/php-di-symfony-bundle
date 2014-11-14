@@ -1,6 +1,6 @@
 <?php
 
-namespace DI\EventListener;
+namespace DI\ControllerBundle\EventListener;
 
 use Doctrine\Common\Annotations\Reader;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;

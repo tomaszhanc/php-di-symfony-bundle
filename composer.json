@@ -16,8 +16,8 @@
         "mnapoli/php-di-symfony2": "*"
     },
     "autoload": {
-        "psr-0": {
-            "": "src/"
+        "psr-4": {
+            "DI\\ControllerBundle": "src/"
         }
     }
 }

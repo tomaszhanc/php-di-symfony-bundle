@@ -1,6 +1,6 @@
 <?php
 
-namespace DI;
+namespace DI\ControllerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
