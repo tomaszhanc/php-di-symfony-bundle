@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DI\\ControllerBundle": "src/"
+            "DI\\ControllerBundle\\": "src/"
         }
     }
 }
