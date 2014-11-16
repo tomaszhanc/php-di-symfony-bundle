@@ -1,5 +1,5 @@
 {
-    "name": "tomaszhanc/php-di-controller-bundle",
+    "name": "tomaszhanc/php-di-symfony-bundle",
     "description": "Provides autowiring controllers for Symfony2 & PHP-DI",
     "license": "MIT",
     "authors": [
@@ -8,16 +8,27 @@
             "email": "tomasz.hanc@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/tomaszhanc/php-di-symfony2"
+        }
+    ],
     "require": {
         "symfony/http-kernel": "~2.3",
         "symfony/config": "~2.3",
         "symfony/dependency-injection": "~2.3",
-        "doctrine/annotations": "~1.2",
-        "mnapoli/php-di-symfony2": "*"
+        "mnapoli/php-di": "5.*@dev",
+        "mnapoli/php-di-symfony2": "@dev"
+    },
+    "require-dev": {
+        "php": ">=5.5",
+        "phpunit/phpunit": "4.3.*",
+        "mockery/mockery": "*"
     },
     "autoload": {
         "psr-4": {
-            "DI\\ControllerBundle\\": "src/"
+            "DI\\Bundle\\Symfony\\": "src/"
         }
     }
 }
