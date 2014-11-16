@@ -4,6 +4,7 @@ namespace DI\Bundle\Symfony\DependencyInjection\Loader;
 
 use Symfony\Component\Config\FileLocatorInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Definition;
 
 abstract class FileLoader
 {
@@ -23,13 +24,15 @@ abstract class FileLoader
         $this->locator = $locator;
     }
 
-    public function load($file)
+    public function load($id, $file)
     {
-        $source = $this->createDefinitionSource($this->locator->locate($file));
+        $class = $this->getDefinitionSourceClass();
 
-        $loader = $this->container->getDefinition('di.definition_loader');
-        $loader->addMethodCall('addDefinitionSource', $source);
+        $definition = new Definition($class, [$this->locator->locate($file)]);
+        $definition->addTag('di.definition_source');
+
+        $this->container->setDefinition($id, $definition);
     }
 
-    abstract protected function createDefinitionSource($file);
+    abstract protected function getDefinitionSourceClass();
 } 

@@ -2,12 +2,10 @@
 
 namespace DI\Bundle\Symfony\DependencyInjection\Loader;
 
-use DI\Definition\Source\PHPFileDefinitionSource;
-
 class PhpFileLoader extends FileLoader
 {
-    protected function createDefinitionSource($file)
+    protected function getDefinitionSourceClass()
     {
-        return new PHPFileDefinitionSource($file);
+        return 'DI\Definition\Source\PHPFileDefinitionSource';
     }
 } 
