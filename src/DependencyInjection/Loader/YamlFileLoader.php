@@ -6,7 +6,7 @@ class YamlFileLoader extends FileLoader
 {
     protected function getDefinitionSourceClass()
     {
-        return 'DI\Definition\Source\YamlFileDefinitionSource';
+        return 'DI\Bundle\Symfony\Definition\Source\YamlFileDefinitionSource';
     }
 
 } 

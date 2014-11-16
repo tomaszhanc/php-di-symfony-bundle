@@ -36,11 +36,21 @@ class YamlFileDefinitionSource extends ArrayDefinitionSource
         }
 
         $definitions = Yaml::parse(file_get_contents($this->file));
-
-        // @TODO konwencja - poprzedzone @ oznacza DI\link, pozostale DI\object i trzeba przeleciec array_costam
+        $definitions = $this->parseDefinitions($definitions);
 
         $this->addDefinitions($definitions);
 
         $this->initialized = true;
     }
-} 
+
+    private function parseDefinitions(array $definitions)
+    {
+        return array_map(function($service) {
+            if (preg_match('/^@/', $service)) {
+                return \DI\link(preg_replace('/^@(.+)/', '$1', $service));
+            } else {
+                return \DI\object($service);
+            }
+        }, $definitions);
+    }
+}
