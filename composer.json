@@ -18,7 +18,7 @@
         "symfony/http-kernel": "~2.3",
         "symfony/config": "~2.3",
         "symfony/dependency-injection": "~2.3",
-        "mnapoli/php-di": "5.*@dev",
+        "mnapoli/php-di": "5.0.*@dev",
         "mnapoli/php-di-symfony2": "@dev"
     },
     "require-dev": {
