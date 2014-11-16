@@ -12,7 +12,7 @@ class DefinitionLoader implements DefinitionLoaderInterface
 
     public function addDefinitionSource(ChainableDefinitionSource $source)
     {
-        $this->sources = $source;
+        $this->sources[] = $source;
     }
 
     public function load(ContainerBuilder $container)

@@ -12,7 +12,7 @@ class PhpDiBundle extends Bundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new DefinitionSourcePass());
+        //$container->addCompilerPass(new DefinitionSourcePass());
     }
 
 }
