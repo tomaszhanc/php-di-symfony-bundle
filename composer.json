@@ -8,17 +8,11 @@
             "email": "tomasz.hanc@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/tomaszhanc/php-di-symfony2"
-        }
-    ],
     "require": {
         "symfony/http-kernel": "~2.3",
         "symfony/config": "~2.3",
         "symfony/dependency-injection": "~2.3",
-        "mnapoli/php-di": "5.0.*@dev",
+        "mnapoli/php-di": "5.0.x-dev as 4.99",
         "mnapoli/php-di-symfony2": "@dev"
     },
     "require-dev": {
