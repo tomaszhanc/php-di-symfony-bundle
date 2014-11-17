@@ -7,16 +7,8 @@ Installation via Composer
 -------------------------
 
     {
-        "repositories": [
-            {
-                "type": "vcs",
-                "url": "https://github.com/tomaszhanc/php-di-symfony2"
-            }
-        ],
-
         "require": {
-            "mnapoli/php-di": "5.0.*@dev",
-            "mnapoli/php-di-symfony2": "@dev",
+            "mnapoli/php-di": "5.0.x-dev as 4.99",
             "tomaszhanc/php-di-symfony-bundle": "@dev"
         }
     }
