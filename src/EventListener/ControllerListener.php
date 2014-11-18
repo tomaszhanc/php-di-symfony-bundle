@@ -26,7 +26,14 @@ class ControllerListener implements EventSubscriberInterface
 			return;
 		}
 
-		$controller = explode('::', $request->attributes->get('_controller'));
+        $controller = $request->attributes->get('_controller');
+
+        if (!is_string($controller)) {
+            // works only for controller saved in format: 'Controller::Method'
+            return;
+        }
+
+        $controller = explode('::', $controller);
 
 		if (count($controller) !== 2) {
 			// works only for controller saved in format: 'Controller::Method'
